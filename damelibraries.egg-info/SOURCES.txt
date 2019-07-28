@@ -1,0 +1,10 @@
+LICENSE
+requirements.txt
+setup.py
+damelibraries/__init__.py
+damelibraries.egg-info/PKG-INFO
+damelibraries.egg-info/SOURCES.txt
+damelibraries.egg-info/dependency_links.txt
+damelibraries.egg-info/not-zip-safe
+damelibraries.egg-info/requires.txt
+damelibraries.egg-info/top_level.txt

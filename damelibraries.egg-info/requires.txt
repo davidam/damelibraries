@@ -1,0 +1,6 @@
+damealgorithms
+damejson
+damenltk
+damenumpy
+damepandas
+damescipy

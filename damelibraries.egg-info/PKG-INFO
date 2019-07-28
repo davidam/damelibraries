@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: damelibraries
+Version: 0.0.7
+Summary: Learning Libraries from tests by David Arroyo MEnéndez
+Home-page: http://github.com/davidam/damelibraries
+Author: David Arroyo Menéndez
+Author-email: davidam@gnu.org
+License: GPLv3
+Description: Learning Libraries from tests by David Arroyo MEnéndez
+Keywords: python3,libraries
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
