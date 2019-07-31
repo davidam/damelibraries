@@ -27,7 +27,7 @@ $ pip install --upgrade pip
 $ pip3 install damelibraries
 #+END_SRC
 
-Checking tests in damepandas
+Checking my pandas snippets (damepandas)
 
 #+BEGIN_SRC sh
 $ cd /tmp/dl/lib/python3.5/site-packages/damepandas
