@@ -1,0 +1,40 @@
+
+* Introduction
+
+Many people needs little snippets of source to make exercises and
+learn a library. You can store your exercises in a repository, such
+as, https://github.com/davidam/python-examples.git. It's useful, but
+if the library is suffering changes or changing dependencies, perhaps
+your snippets is not running.
+
+In this project, we are experimenting a way, to store the snippets in
+files to execute unit test. So, the snippets is easy to maintain.
+
+* Install and Check tests in a Library
+
+If you want python virtual environment
+
+#+BEGIN_SRC sh
+$ python3 -m venv /tmp/dl
+$ cd /tmp/dl
+$ source bin/activate
+#+END_SRC
+
+Now, you can install with pip
+
+#+BEGIN_SRC sh
+$ pip install --upgrade pip
+$ pip3 install damelibraries
+#+END_SRC
+
+Checking tests in damepandas
+
+#+BEGIN_SRC sh
+$ cd /tmp/dl/lib/python3.5/site-packages/damepandas
+$ nosetests3 tests
+#+END_SRC
+
+* License
+This document is under a [[http://creativecommons.org/licenses/by/4.0/deed][Creative Commons Attribution 4.0 International]]
+
+[[http://creativecommons.org/licenses/by/4.0/deed][file:http://i.creativecommons.org/l/by/3.0/80x15.png]]
