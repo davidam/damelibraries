@@ -1,4 +1,7 @@
-
+* Logo
+#+attr_html: :width 200px
+#+attr_html: :height 200px
+[[file:files/images/mapgie_in_madrid_91.jpg]]
 * Introduction
 
 Many people needs little snippets of source to make exercises and
