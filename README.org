@@ -30,10 +30,20 @@ $ pip install --upgrade pip
 $ pip3 install damelibraries
 #+END_SRC
 
-Checking my pandas snippets (damepandas)
+Checking my snippets:
 
 #+BEGIN_SRC sh
+$ cd /tmp/dl/lib/python3.5/site-packages/damealgorithms
+$ nosetests3 tests
+$ cd /tmp/dl/lib/python3.5/site-packages/damejson
+$ nosetests3 tests
 $ cd /tmp/dl/lib/python3.5/site-packages/damepandas
+$ nosetests3 tests
+$ cd /tmp/dl/lib/python3.5/site-packages/damenltk
+$ nosetests3 tests
+$ cd /tmp/dl/lib/python3.5/site-packages/damenumpy
+$ nosetests3 tests
+$ cd /tmp/dl/lib/python3.5/site-packages/damescipy
 $ nosetests3 tests
 #+END_SRC
 
