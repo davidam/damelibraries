@@ -22,11 +22,17 @@
 # Boston, MA 02110-1301 USA,
 
 from setuptools import setup
+from os import path
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(name='damelibraries',
-      version='0.0.7',
+      version='0.0.10',
       description='Learning Libraries from tests by David Arroyo MEnéndez',
-      long_description='Learning Libraries from tests by David Arroyo MEnéndez',
+      long_description= long_description,
+      long_description_content_type='text/markdown',
       classifiers=[
           "Programming Language :: Python :: 3",
           "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
@@ -38,7 +44,7 @@ setup(name='damelibraries',
       author_email='davidam@gnu.org',
       license='GPLv3',
       packages=['damelibraries'],
-      data_files=[('',['requirements.txt','LICENSE'])],
+      data_files=[('damelibraries',['requirements.txt','LICENSE', 'files/images/mapgie_in_madrid_91.jpg'])],
       install_requires=[
           'damealgorithms',
           'damejson',
