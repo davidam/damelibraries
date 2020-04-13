@@ -47,6 +47,9 @@ $ cd /tmp/dl/lib/python3.5/site-packages/damescipy
 $ nosetests3 tests
 #+END_SRC
 
+* Music
++ https://www.youtube.com/playlist?list=PLeobXV-Yyn-LvQydcnr46ZkGh1V6tDGEk
+
 * License
 This document is under a [[http://creativecommons.org/licenses/by/4.0/deed][Creative Commons Attribution 4.0 International]]
 

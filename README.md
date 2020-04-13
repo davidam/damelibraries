@@ -5,7 +5,8 @@
 <li><a href="#sec-1">1. Logo</a></li>
 <li><a href="#sec-2">2. Introduction</a></li>
 <li><a href="#sec-3">3. Install and Check tests in a Library</a></li>
-<li><a href="#sec-4">4. License</a></li>
+<li><a href="#sec-4">4. Music</a></li>
+<li><a href="#sec-5">5. License</a></li>
 </ul>
 </div>
 </div>
@@ -53,7 +54,11 @@ Checking my snippets:
     $ cd /tmp/dl/lib/python3.5/site-packages/damescipy
     $ nosetests3 tests
 
-# License<a id="sec-4" name="sec-4"></a>
+# Music<a id="sec-4" name="sec-4"></a>
+
+-   <https://www.youtube.com/playlist?list=PLeobXV-Yyn-LvQydcnr46ZkGh1V6tDGEk>
+
+# License<a id="sec-5" name="sec-5"></a>
 
 This document is under a [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/deed)
 
