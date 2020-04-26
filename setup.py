@@ -29,7 +29,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(name='damelibraries',
-      version='0.0.11',
+      version='0.0.13',
       description='Learning Libraries from tests by David Arroyo MEnéndez',
       long_description= long_description,
       long_description_content_type='text/markdown',
@@ -54,6 +54,7 @@ setup(name='damelibraries',
           'damepandas',
           'damescipy',
           'damescraping',
+          'damescikit',
       ],
       test_suite='nose.collector',
       tests_require=['nose', 'nose-cover3'],
