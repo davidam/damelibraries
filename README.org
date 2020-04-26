@@ -1,7 +1,6 @@
 * Logo
-#+attr_html: :width 200px
-#+attr_html: :height 200px
-[[file:files/images/mapgie_in_madrid_91.jpg]]
+file:https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Magpie_in_Madrid_%28Spain%29_91.jpg/636px-Magpie_in_Madrid_%28Spain%29_91.jpg
+
 * Introduction
 
 Many people needs little snippets of source to make exercises and
