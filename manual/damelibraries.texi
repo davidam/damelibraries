@@ -1,0 +1,109 @@
+\input texinfo   @c -*-texinfo-*-
+@comment $Id@w{$}
+@comment %**start of header
+@settitle Using Python Libraries from Tests @value{VERSION}
+@syncodeindex pg cp
+@comment %**end of header
+@include copying-fdl.texi
+
+@titlepage
+@title Using Python Libraries from Tests
+@author David Arroyo Men@'endez (@email{davidam@@gmail.com})
+@page
+@vskip 0pt plus 1filll
+@insertcopying
+@end titlepage
+
+@contents
+
+@ifnottex
+@node Top
+@top Top
+
+Using Python Libraries from Tests (version @value{VERSION}, @value{UPDATED}).
+@end ifnottex
+
+@menu
+* Introduction::
+* Installation::
+* License::
+* Index::
+
+
+@end menu
+
+@node Introduction
+@chapter Introduction
+@cindex Introduction
+
+Python is a winner in the trend market of programming languages in
+this moment. Although the sintaxis is so comfortable to the
+programmers, the clue is in the modern libraries for system
+administrators, scientifics and with low importance for web
+programmers.
+
+You can see the Tiobe Index:
+
+@image{images/tiobeindex2021,6in,,Tiobe Index 2021}
+
+You can check that Python is growing fast and reaching the most
+important positions in the market. The third position in January of
+2021.
+
+
+
+@node Installation
+@chapter Installation
+@cindex Installation
+@cindex Python Virtual Environment
+
+You can create a python virtual environment and to install
+damelibraries with python package:
+
+@example
+$ python3 -m venv /tmp/venv
+$ cd /tmp/venv
+$ source bin/activate
+$ pip install --upgrade pip
+$ pip3 install damelibraries
+$ cd lib/python3.5/site-packages/damelibraries
+@end example
+
+Now you can execute tests to check different libraries:
+
+@example
+$ cd /tmp/venv/lib/python3.8/site-packages/damealgorithms
+$ nosetests3 tests
+
+$ cd /tmp/venv/lib/python3.8/site-packages/damejson
+$ nosetests3 tests
+
+$ cd /tmp/venv/lib/python3.8/site-packages/damenltk
+$ nosetests3 tests
+
+$ cd /tmp/venv/lib/python3.8/site-packages/damenumpy
+$ nosetests3 tests
+
+$ cd /tmp/venv/lib/python3.8/site-packages/damepandas
+$ nosetests3 tests
+
+$ cd /tmp/venv/lib/python3.8/site-packages/damescikit
+$ nosetests3 tests
+
+$ cd /tmp/venv/lib/python3.8/site-packages/damescipy
+$ nosetests3 tests
+@end example
+
+
+@node License 
+@appendix License
+@cindex Damegender License
+
+@include fdl-1.3.texi
+
+
+@node Index
+@unnumbered Index
+@printindex cp
+
+@bye
