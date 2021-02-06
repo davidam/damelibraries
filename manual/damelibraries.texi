@@ -50,7 +50,38 @@ You can check that Python is growing fast and reaching the most
 important positions in the market. The third position in January of
 2021.
 
+You can use or don't use a test system such as nose or pytest, but all
+people need test the code in the programming. After to write software
+you must introduce inputs in your code and verify if the output is ok.
 
+The advantage using a test system is generate automation in the
+process about inputs, code being tested and outputs. Each test is
+evaluated with asserts, that's comparations between the result that
+you deserve and the result obtained. For instance,
+
+@example
+    def test_models_lda(self):
+        X = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
+        y = np.array([1, 1, 1, 2, 2, 2])
+        clf = LinearDiscriminantAnalysis()
+        clf.fit(X, y)
+        self.assertEqual(clf.predict([[-1, -1]]), 1)
+@end example
+
+So, assertEqual is the comparision and the rest is the code to be
+verified.
+
+To become a professional in Python you must learn a good bunch of
+libraries. So you can practice the libraries reading tutorials, python
+notebooks, or you could write tests about this libraries and perhaps
+to share these tests in some software repository.
+
+If you save all test code about your python libraries in one or
+various software repositories you can test all code with a
+command. The python libraries can suffer chances, but you have the
+control about the use that you do about your libraries.
+
+The goal of this book is to teach Python Libraries from the tests.
 
 @node Installation
 @chapter Installation
@@ -97,7 +128,7 @@ $ nosetests3 tests
 
 @node License 
 @appendix License
-@cindex Damegender License
+@cindex License
 
 @include fdl-1.3.texi
 
