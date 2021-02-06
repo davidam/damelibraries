@@ -200,11 +200,20 @@ class TddInPythonExample(unittest.TestCase):
             filtered_tweet_words = [word.lower() for word in tweet.split() if len(word) >= 3]
             tweets_with_sentiment.append((filtered_tweet_words, sentiment))
 
-        self.assertEqual([(['love', 'this', 'car'], 'positive'), (['this', 'view', 'amazing'], 'positive'), (['feel', 'great', 'this', 'mornin
-g'], 'positive'), (['excited', 'about', 'the', 'concert'], 'positive'), (['best', 'friend'], 'positive'), (['this', 'movie', 'was', 'great'], 
-'positive'), (['this', 'movie', 'was', 'not', 'pathetic'], 'positive'), (['not', 'like', 'this', 'car'], 'negative'), (['this', 'view', 'horri
-ble'], 'negative'), (['feel', 'tired', 'this', 'morning'], 'negative'), (['not', 'looking', 'forward', 'the', 'concert'], 'negative'), (['enem
-y'], 'negative'), (['this', 'pathetic', 'movie'], 'negative')], tweets_with_sentiment)
+        self.assertEqual([(['love', 'this', 'car'], 'positive'),
+                          (['this', 'view', 'amazing'], 'positive'),
+                          (['feel', 'great', 'this', 'morning'], 'positive'),
+                          (['excited', 'about', 'the', 'concert'], 'positive'),
+                          (['best', 'friend'], 'positive'),
+                          (['this', 'movie', 'was', 'great'], 'positive'),
+                          (['this', 'movie', 'was', 'not', 'pathetic'], 'positive'),
+                          (['not', 'like', 'this', 'car'], 'negative'),
+                          (['this', 'view', 'horrible'], 'negative'),
+                          (['feel', 'tired', 'this', 'morning'], 'negative'),
+                          (['not', 'looking', 'forward', 'the', 'concert'], 'negative'),
+                          (['enemy'], 'negative'),
+                          (['this', 'pathetic', 'movie'], 'negative')],
+                          tweets_with_sentiment)
 @end example
 
 You can execute this test with:
@@ -213,8 +222,72 @@ You can execute this test with:
 $ nosetest3 test/test_sentiment.py
 @end example
 
+@section Detect Gender
 
+The gender detection from the name is a NLP task. So the input is one
+or more word (name and perhaps surname) and the output is a gender
+male, female, ...
 
+NLTK brings a good list of names in the nltk.corpus. So you can
+classify names with two ways:
+
+@itemize @bullet
+@item
+Querying single files
+@item
+Supervised classifier
+@end itemize
+
+The python method using single files would be:
+
+@example
+    def gender_name(self, name):
+        gender = 'undefined'
+        if name in names.words('male.txt'):
+            gender = 'male'
+        if name in names.words('female.txt'):
+            if (gender == 'male'):
+                gender = 'both'
+            else:
+                gender = 'female'
+        return gender
+@end example
+
+And the python test would be:
+
+@example
+    def test_gender_name_method_returns_correct_result(self):
+        dn = DameNLTK()
+        self.assertTrue(dn.gender_name("Neo"), "male")
+        self.assertTrue(dn.gender_name("Trinity"), "female")
+        self.assertTrue(dn.gender_name("Andrea"), "both")                
+@end example
+
+The python methods using machine learnig would be:
+
+@example
+    def gender_features(self, word):
+        return {'last_letter': word[-1]}
+    
+    def gender_classifier(self):
+        labeled_names = ([(name, 'male') for name in names.words('male.txt')] +
+                         [(name, 'female') for name in names.words('female.txt')])
+
+        featuresets = [(self.gender_features(n), gender) for (n, gender) in labeled_names]
+        train_set, test_set = featuresets[500:], featuresets[:500]
+        classifier = nltk.NaiveBayesClassifier.train(train_set)
+        return classifier
+@end example
+
+And the python tests would be:
+
+@example
+    def test_gender_classifier_method_returns_correct_result(self):
+        dn = DameNLTK()
+        classifier = dn.gender_classifier()
+        self.assertTrue(classifier.classify(dn.gender_features("Neo")), "male")
+        self.assertTrue(classifier.classify(dn.gender_features("Trinity")), "female")        
+@end example
 
 @node License 
 @appendix License
