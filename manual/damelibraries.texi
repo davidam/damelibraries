@@ -337,6 +337,62 @@ $ nosetests3 test/test_dame_utils.py:TddInPythonExample.test_string2array
 
 @section Sentence Similarity
 
+Remembering to W H Gomaa and A A Fahmy in ``A Survey of Text Similarity
+Approaches'':
+
+Finding similarity between words is a fundamental part of
+text similarity which is then used as a primary stage for sentence,
+paragraph and document similarities. Words can be similar in two ways
+lexically and semantically. Words are similar lexically if they have a
+similar character sequence. Words are similar semantically if they
+have the same thing, are opposite of each other, used in the same way,
+used in the same context and one is a type of another.
+
+In the python method sentence_similarity we divide the text in two
+vectors (vector1 and vector2) and we apply the cosine distance: 
+
+@example
+    def sentence_similarity(self, sent1, sent2, stopwords=None):
+        if stopwords is None:
+            stopwords = []
+
+        sent1 = [w.lower() for w in sent1]
+        sent2 = [w.lower() for w in sent2]
+
+        all_words = list(set(sent1 + sent2))
+
+        vector1 = [0] * len(all_words)
+        vector2 = [0] * len(all_words)
+
+        # build the vector for the first sentence
+        for w in sent1:
+            if w in stopwords:
+                continue
+            vector1[all_words.index(w)] += 1
+
+        # build the vector for the second sentence
+        for w in sent2:
+            if w in stopwords:
+                continue
+            vector2[all_words.index(w)] += 1
+
+        return 1 - cosine_distance(vector1, vector2)
+@end example
+
+We can learn to use this method checking the test:
+
+@example
+    def test_sentencesimilarity_method_returns_correct_result(self):
+        dn = DameNLTK()
+        self.assertTrue(dn.sentence_similarity("This is a good sentence".split(), "This is a bad sentence".split()) > 0.6)
+@end example
+
+Remember execute the test to learn if the test is running:
+
+@example
+$ nosetest3 test/test_sentence_similarity.py
+@end example
+
 
 
 @node License 
