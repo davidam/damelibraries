@@ -289,6 +289,56 @@ And the python tests would be:
         self.assertTrue(classifier.classify(dn.gender_features("Trinity")), "female")        
 @end example
 
+You can use an advanced software to detect gender such as Damegender
+with many features:
+
+@example
+$ pip3 install damegender[all]
+@end example
+
+You can learn to use the software with tests oriented to the user
+(bash files) or tests oriented to the developer (python tests). 
+
+@example
+$ python3 -m venv /tmp/damegender/
+$ cd /tmp/damegender/
+$ source bin/activate
+$ pip3 install damegender[all]
+$ ./testsbycommands.sh 
+maindavid test is ok
+mainjesus test is ok
+mainines test is ok
+mainalex test is ok
+mainandrea test is ok
+mainjesusmaria test is ok
+mainjosemaria test is ok
+mainelenaluciahelena test is ok
+mainjuliaus test is ok
+mainjuliauk test is ok
+mainjuliauy test is ok
+[...]
+
+$ nosetest3 test
+[...]
+@end example
+
+Execute these tests could be long time, but you can execute a single
+file test, for example, you can execute test/test_dame_utils.py:
+
+@example
+$ nosetest3 test/test_dame_utils.py
+@end example
+
+Or you can execute a single test in a file with:
+
+@example
+$ nosetests3 test/test_dame_utils.py:TddInPythonExample.test_string2array
+@end example
+
+@section Sentence Similarity
+
+
+
 @node License 
 @appendix License
 @cindex License
