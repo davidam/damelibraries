@@ -394,7 +394,33 @@ Remember execute the test to learn if the test is running:
 $ nosetest3 test/test_sentence_similarity.py
 @end example
 
-@section Classifying Documents
+@section Singulars and Plurals
+
+Another task is about to build singulars and plurals from a word. You
+can read the test file:
+
+@example
+import unittest
+import nltk
+from nltk.stem import *
+from nltk.stem.snowball import SnowballStemmer
+
+class TddInPythonExample(unittest.TestCase):
+
+    def test_stem_returns_correct_result(self):
+        stemmer = PorterStemmer()
+        self.assertEqual(stemmer.stem("vuelos"), "vuelo")
+
+    def test_snowball_stem_returns_correct_result(self):
+        sb = SnowballStemmer("english").stem("generously")
+        self.assertEqual(sb, "generous")
+@end example
+
+You can test it with:
+
+@example
+$ nosetest3 test/test_stem.py
+@end example
 
 
 @node License 
