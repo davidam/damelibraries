@@ -26,6 +26,7 @@ Using Python Libraries from Tests (version @value{VERSION}, @value{UPDATED}).
 @menu
 * Introduction::
 * Installation::
+* DameNLTK::
 * License::
 * Index::
 
@@ -61,7 +62,8 @@ you deserve and the result obtained. For instance,
 
 @example
     def test_models_lda(self):
-        X = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
+        X = np.array([[-1, -1], [-2, -1], [-3, -2],
+                      [1, 1], [2, 1], [3, 2]])
         y = np.array([1, 1, 1, 2, 2, 2])
         clf = LinearDiscriminantAnalysis()
         clf.fit(X, y)
@@ -124,6 +126,94 @@ $ nosetests3 tests
 $ cd /tmp/venv/lib/python3.8/site-packages/damescipy
 $ nosetests3 tests
 @end example
+
+
+@node DameNLTK
+@chapter DameNLTK
+@cindex DameNLTK
+
+NLTK is an acronym about Natural Language ToolKit.
+
+A summary of tasks about Natural Language Processing could be:
+
+@itemize @bullet
+@item
+Sentiment Analysis
+@item
+Detect Gender
+@item
+Sentence Similarity
+@item
+Text Summary
+@item
+Classify Documents
+@item
+Manage Words
+@item
+Gramatical Trees
+@item
+Extract Keywords
+@item
+Disambiguation
+@end itemize
+
+You could be in the path of nltk so:
+
+@example
+$ cd /tmp/venv/
+$ source bin/activate
+(venv)$ pip3 install damenltk
+$ cd /tmp/venv/lib/python3.8/site-packages/damenltk
+$ nosetest3 test
+@end example
+
+@section Sentiment Analysis
+
+Sentiment analysis is applied in a popular way in Twitter with python
+libraries such as tweepy. Finally, it is a classification task about
+words with a label (the sentiment). That could be implemented with
+nltk. Take a look to the test:
+
+@example
+import unittest
+from nltk.classify import SklearnClassifier
+class TddInPythonExample(unittest.TestCase):
+
+    def test_sentiment_variable_create_returns_correct_result(self):
+        pos_tweets = [('I love this car', 'positive'),
+                      ('This view is amazing', 'positive'),
+                      ('I feel great this morning', 'positive'),
+                      ('I am so excited about the concert', 'positive'),
+                      ('He is my best friend', 'positive'),
+                      ('This movie was great', 'positive'),
+                      ('This movie was not pathetic', 'positive')]
+
+        neg_tweets = [('I do not like this car', 'negative'),
+                      ('This view is horrible', 'negative'),
+                      ('I feel tired this morning', 'negative'),
+                      ('I am not looking forward to the concert', 'negative'),
+                      ('He is my enemy', 'negative'),
+                      ('This is a pathetic movie', 'negative')]
+
+        tweets_with_sentiment = []
+        for (tweet, sentiment) in pos_tweets + neg_tweets:
+            filtered_tweet_words = [word.lower() for word in tweet.split() if len(word) >= 3]
+            tweets_with_sentiment.append((filtered_tweet_words, sentiment))
+
+        self.assertEqual([(['love', 'this', 'car'], 'positive'), (['this', 'view', 'amazing'], 'positive'), (['feel', 'great', 'this', 'mornin
+g'], 'positive'), (['excited', 'about', 'the', 'concert'], 'positive'), (['best', 'friend'], 'positive'), (['this', 'movie', 'was', 'great'], 
+'positive'), (['this', 'movie', 'was', 'not', 'pathetic'], 'positive'), (['not', 'like', 'this', 'car'], 'negative'), (['this', 'view', 'horri
+ble'], 'negative'), (['feel', 'tired', 'this', 'morning'], 'negative'), (['not', 'looking', 'forward', 'the', 'concert'], 'negative'), (['enem
+y'], 'negative'), (['this', 'pathetic', 'movie'], 'negative')], tweets_with_sentiment)
+@end example
+
+You can execute this test with:
+
+@example
+$ nosetest3 test/test_sentiment.py
+@end example
+
+
 
 
 @node License 
