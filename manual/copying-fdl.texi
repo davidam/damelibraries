@@ -1,6 +1,6 @@
 @copying
 
-Copyright @copyright{} 2020 David Arroyo Men@'endez
+Copyright @copyright{} 2021 David Arroyo Men@'endez
 
       Permission is granted to copy, distribute and/or modify this
       document under the terms of the GNU Free Documentation License,
