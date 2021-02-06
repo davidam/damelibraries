@@ -434,6 +434,16 @@ You can find the test:
 $ nosetest3 test/test_stopwords.py
 @end example
 
+@section Synonims and antonims
+
+Another tool for NLP tasks is to retrieve synonims and antonims from
+words. You can execute the tests:
+
+@example
+$ nosetest3 test/test_syn.py
+@end example
+
+
 
 @node License 
 @appendix License
