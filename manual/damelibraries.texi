@@ -348,8 +348,9 @@ similar character sequence. Words are similar semantically if they
 have the same thing, are opposite of each other, used in the same way,
 used in the same context and one is a type of another.
 
-In the python method sentence_similarity we divide the text in two
-vectors (vector1 and vector2) and we apply the cosine distance: 
+In the python method sentence_similarity we apply similarity
+lexical. So, it's dividing the text in two vectors (vector1 and vector2)
+and we apply the cosine distance:
 
 @example
     def sentence_similarity(self, sent1, sent2, stopwords=None):
@@ -393,6 +394,7 @@ Remember execute the test to learn if the test is running:
 $ nosetest3 test/test_sentence_similarity.py
 @end example
 
+@section Classifying Documents
 
 
 @node License 
