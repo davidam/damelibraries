@@ -7,7 +7,7 @@
 @include copying-fdl.texi
 
 @titlepage
-@title Using Python Libraries from Tests
+@title DameLibraries: Using Python Libraries from Tests
 @author David Arroyo Men@'endez (@email{davidam@@gmail.com})
 @page
 @vskip 0pt plus 1filll
@@ -396,8 +396,25 @@ $ nosetest3 test/test_sentence_similarity.py
 
 @section Singulars and Plurals
 
-Another task is about to build singulars and plurals from a word. You
-can read the test file:
+@section Stopwords
+
+For some search engines, these are some of the most common, short
+function words, such as the, is, at, which, and on. In this case, stop words
+can cause problems when searching for phrases that include them
+
+You can find the test:
+
+@example
+$ nosetest3 test/test_stopwords.py
+@end example
+
+@section Manage words
+
+Managing words is about definitions, singulars, plurals, synonims and
+antonims
+
+We can start building singulars and plurals from a word. You can read
+the test file:
 
 @example
 import unittest
@@ -422,20 +439,6 @@ You can test it with:
 $ nosetest3 test/test_stem.py
 @end example
 
-@section Stopwords
-
-For some search engines, these are some of the most common, short
-function words, such as the, is, at, which, and on. In this case, stop words
-can cause problems when searching for phrases that include them
-
-You can find the test:
-
-@example
-$ nosetest3 test/test_stopwords.py
-@end example
-
-@section Definitions, Synonims and antonims
-
 Another tool for NLP tasks is to retrieve synonims and antonims from
 words. You can execute the tests:
 
@@ -451,6 +454,10 @@ $ nosetests3 test/test_wordnet.py
 
 Wordnet provides measures about semantic similarity between
 words, definitions about words, ...
+
+@section Semantic Trees
+
+
 
 @node License 
 @appendix License
