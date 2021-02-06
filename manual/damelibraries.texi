@@ -422,6 +422,18 @@ You can test it with:
 $ nosetest3 test/test_stem.py
 @end example
 
+@section Stopwords
+
+For some search engines, these are some of the most common, short
+function words, such as the, is, at, which, and on. In this case, stop words
+can cause problems when searching for phrases that include them
+
+You can find the test:
+
+@example
+$ nosetest3 test/test_stopwords.py
+@end example
+
 
 @node License 
 @appendix License
