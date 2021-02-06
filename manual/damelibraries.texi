@@ -1,7 +1,7 @@
 \input texinfo   @c -*-texinfo-*-
 @comment $Id@w{$}
 @comment %**start of header
-@settitle Using Python Libraries from Tests @value{VERSION}
+@settitle DameLibraries: Using Python Libraries from Tests @value{VERSION}
 @syncodeindex pg cp
 @comment %**end of header
 @include copying-fdl.texi
@@ -20,7 +20,7 @@
 @node Top
 @top Top
 
-Using Python Libraries from Tests (version @value{VERSION}, @value{UPDATED}).
+DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @value{UPDATED}).
 @end ifnottex
 
 @menu
@@ -455,7 +455,15 @@ $ nosetests3 test/test_wordnet.py
 Wordnet provides measures about semantic similarity between
 words, definitions about words, ...
 
-@section Semantic Trees
+@section Corpus
+
+The corpus allows use data very useful in NLP (ex: gutemberg files,
+twitter examples, wordnet, names with gender, ...)
+
+@example
+$ nosetests3 test/test_corpus.py 
+$ nosetests3 test/test_gutenberg.py 
+@end example
 
 
 
