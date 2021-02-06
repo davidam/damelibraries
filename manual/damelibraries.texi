@@ -434,7 +434,7 @@ You can find the test:
 $ nosetest3 test/test_stopwords.py
 @end example
 
-@section Synonims and antonims
+@section Definitions, Synonims and antonims
 
 Another tool for NLP tasks is to retrieve synonims and antonims from
 words. You can execute the tests:
@@ -443,7 +443,14 @@ words. You can execute the tests:
 $ nosetest3 test/test_syn.py
 @end example
 
+Another way is using wordnet:
 
+@example
+$ nosetests3 test/test_wordnet.py
+@end example
+
+Wordnet provides measures about semantic similarity between
+words, definitions about words, ...
 
 @node License 
 @appendix License
