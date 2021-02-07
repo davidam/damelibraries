@@ -147,6 +147,28 @@ $ nosetests3 tests/test_datatypes.py
 $ nosetests3 tests/test_maths.py
 @end example
 
+@node DamePandas
+@chapter DamePandas
+@cindex DamePandas
+
+Pandas is a fast, powerful, flexible and easy to use open source data
+analysis and manipulation tool, built on top of the Python programming
+language.
+
+@example
+$ cd /tmp/venv/lib/python3.8/site-packages/damepandas
+$ nosetests3 test/test_create.py
+$ nosetests3 test/test_json.py
+$ nosetests3 test/test_operators.py
+$ nosetests3 test/test_utils.py
+@end example
+
+In test_create.py is being created tests for create datastructures.
+In test_json.py we practice some json utils in Pandas.  In
+test_operators.py and test_utils.py there are more functions related
+to Pandas such as read_csv, concat, shape, ...
+
+
 @node DameNLTK
 @chapter DameNLTK
 @cindex DameNLTK
