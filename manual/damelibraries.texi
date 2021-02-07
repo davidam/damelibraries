@@ -26,6 +26,7 @@ DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @valu
 @menu
 * Introduction::
 * Installation::
+* DameNumpy::
 * DameNLTK::
 * License::
 * Index::
@@ -127,6 +128,24 @@ $ cd /tmp/venv/lib/python3.8/site-packages/damescipy
 $ nosetests3 tests
 @end example
 
+@node DameNumpy
+@chapter DameNumpy
+@cindex DameNumpy
+
+Numpy is a library about algebra used as dependency in a lot of python
+programs. We have classified the tests in basics, datatypes and
+maths. Basics is related to the most common uses about the library
+(sum vectors, transpose matrix, generate eye matrix, ...). Datatypes
+is about specific uses about the numpy datatypes that perhaps you need
+practice more. And maths is about maths operations. You can execute
+the test with:
+
+@example
+$ cd /tmp/venv/lib/python3.8/site-packages/damenumpy
+$ nosetests3 tests/test_basics.py
+$ nosetests3 tests/test_datatypes.py
+$ nosetests3 tests/test_maths.py
+@end example
 
 @node DameNLTK
 @chapter DameNLTK
@@ -464,7 +483,6 @@ twitter examples, wordnet, names with gender, ...)
 $ nosetests3 test/test_corpus.py 
 $ nosetests3 test/test_gutenberg.py 
 @end example
-
 
 
 @node License 
