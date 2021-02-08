@@ -29,7 +29,7 @@ with open(path.join(this_directory, 'README.md')) as f:
     long_description = f.read()
 
 setup(name='damelibraries',
-      version='0.0.14',
+      version='0.0.19',
       description='Learning Libraries from tests by David Arroyo MEnéndez',
       long_description= long_description,
       classifiers=[
@@ -46,7 +46,7 @@ setup(name='damelibraries',
       data_files=[('damelibraries',['requirements.txt','LICENSE', 'files/images/mapgie_in_madrid_91.jpg'])],
       install_requires=[
           'damealgorithms',
-          'damejson',
+          'dameformats',
 #          'damemysql',
           'damenltk',
           'damenumpy',
