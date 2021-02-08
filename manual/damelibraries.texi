@@ -574,7 +574,13 @@ $ nosetests3 test/test_gutenberg.py
 
 @section Gramatical Trees
 
+The gramatical trees are a tool in Natural Language Processing to draw
+the gramatical in a visual or computing way. We have created tests
+with gramatical trees:
 
+@example
+$ nosetests3 test/test_semantic_tree.py
+@end example
 
 @node License 
 @appendix License
