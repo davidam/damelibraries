@@ -27,6 +27,8 @@ DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @valu
 * Introduction::
 * Installation::
 * DameNumpy::
+* DamePandas::
+* DameScikit::
 * DameNLTK::
 * License::
 * Index::
@@ -168,6 +170,55 @@ In test_json.py we practice some json utils in Pandas.  In
 test_operators.py and test_utils.py there are more functions related
 to Pandas such as read_csv, concat, shape, ...
 
+@node DameScikit
+@chapter DameScikit
+@cindex DameScikit
+
+Scikit is a popular library about Machine Learning (ML) released with
+BSD. In this chapter we are going to learn to apply algorithms to the
+different tasks in ML.
+
+@itemize @bullet
+@item
+Classification
+@item
+Clustering
+@item
+Clustering
+@item
+Regression
+@item
+Dimensionality Reduction
+@end itemize
+
+Take a look to the next diagram:
+
+@image{images/scikit-graph,6in,,Scikit Graph}
+
+Classification and Clustering is about to learn to decide elements in
+groups (to classify). In Classification we have a training set, so we
+are doing supervised learning. In clustering we have not a training
+set, so we are doing unsupervised learning.
+
+Dimensionality reduction is about to determine the most important
+factors or features to make the machine learning.
+
+Regression is about to decide a quantity from a set of training
+examples.
+
+In DameScikit we have a lot of examples about to apply machine
+learning models on a simple way:
+
+@example
+$ nosetests3 tests/test_models.py
+@end example
+
+That's the most important, but Scikit is a long library with a lot of
+interesting features. You can check more tests:
+
+@example
+$ nosetests3 tests
+@end example
 
 @node DameNLTK
 @chapter DameNLTK
@@ -435,8 +486,6 @@ Remember execute the test to learn if the test is running:
 $ nosetest3 test/test_sentence_similarity.py
 @end example
 
-@section Singulars and Plurals
-
 @section Stopwords
 
 For some search engines, these are some of the most common, short
@@ -499,12 +548,16 @@ words, definitions about words, ...
 @section Corpus
 
 The corpus allows use data very useful in NLP (ex: gutemberg files,
-twitter examples, wordnet, names with gender, ...)
+twitter examples, wordnet, names with gender, ...). You can check the
+source to learn how to use it:
 
 @example
 $ nosetests3 test/test_corpus.py 
 $ nosetests3 test/test_gutenberg.py 
 @end example
+
+@section Gramatical Trees
+
 
 
 @node License 
