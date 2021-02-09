@@ -26,6 +26,7 @@ DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @valu
 @menu
 * Introduction::
 * Installation::
+* DameFormats::
 * DameNumpy::
 * DamePandas::
 * DameScikit::
@@ -111,7 +112,7 @@ Now you can execute tests to check different libraries:
 $ cd /tmp/venv/lib/python3.8/site-packages/damealgorithms
 $ nosetests3 tests
 
-$ cd /tmp/venv/lib/python3.8/site-packages/damejson
+$ cd /tmp/venv/lib/python3.8/site-packages/dameformats
 $ nosetests3 tests
 
 $ cd /tmp/venv/lib/python3.8/site-packages/damenltk
@@ -128,6 +129,20 @@ $ nosetests3 tests
 
 $ cd /tmp/venv/lib/python3.8/site-packages/damescipy
 $ nosetests3 tests
+@end example
+
+@node DameFormats
+@chapter DameFormats
+@cindex DameFormats
+
+Json, csv, xml are very important format files. This chapter is about
+to use python with these formats.
+
+@example
+$ cd /tmp/venv/lib/python3.8/site-packages/dameformats
+$ nosetests3 tests/test_damecsv.py
+$ nosetests3 tests/test_damejson.py
+$ nosetests3 tests/test_damexml.py
 @end example
 
 @node DameNumpy
