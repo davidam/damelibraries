@@ -136,7 +136,7 @@ $ nosetests3 tests
 @cindex DameFormats
 
 Json, csv, xml are very important format files. This chapter is about
-to use python with these formats.
+how to use python with these formats presenting some snippets:
 
 @example
 $ cd /tmp/venv/lib/python3.8/site-packages/dameformats
