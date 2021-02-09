@@ -27,6 +27,7 @@ DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @valu
 * Introduction::
 * Installation::
 * DameFormats::
+* DameScraping::
 * DameNumpy::
 * DamePandas::
 * DameScikit::
@@ -144,6 +145,29 @@ $ nosetests3 tests/test_damecsv.py
 $ nosetests3 tests/test_damejson.py
 $ nosetests3 tests/test_damexml.py
 @end example
+
+@node DameScraping
+@chapter DameScraping
+@cindex DameScraping
+
+There are several libraries for to do scraping. The most standard and
+important library is request. I suggest you to use this library if you
+have doubts about what library to choose.
+
+There are another libraries with modern features such as MechanicalSoup.
+
+Another idea is libraries such as newspaper where you can integrate
+NLTK in a specific domain (newspaper).
+
+Now you can check the source of the libraries.
+
+@example
+$ cd /tmp/venv/lib/python3.8/site-packages/damescraping
+$ nosetests3 test/test_requests.py
+$ nosetests3 test/test_mechanicalsoup.py
+$ nosetests3 test/test_newspaper.py
+@end example
+
 
 @node DameNumpy
 @chapter DameNumpy
