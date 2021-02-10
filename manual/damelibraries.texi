@@ -30,6 +30,7 @@ DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @valu
 * DameScraping::
 * DameNumpy::
 * DamePandas::
+* DameScipy::
 * DameScikit::
 * DameNLTK::
 * License::
@@ -208,6 +209,18 @@ In test_create.py is being created tests for create datastructures.
 In test_json.py we practice some json utils in Pandas.  In
 test_operators.py and test_utils.py there are more functions related
 to Pandas such as read_csv, concat, shape, ...
+
+@node DameScipy
+@chapter DameScipy
+@cindex DameScipy
+
+Scipy is a popular library focused on maths for science and computing
+released with BSD license. You can check the tests now:
+
+@example
+$ cd /tmp/venv/lib/python3.8/site-packages/damescipy
+$ nosetest3 test
+@end example
 
 @node DameScikit
 @chapter DameScikit
