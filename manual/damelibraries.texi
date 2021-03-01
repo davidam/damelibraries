@@ -33,6 +33,7 @@ DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @valu
 * DameScipy::
 * DameScikit::
 * DameNLTK::
+* DameWebutils::
 * License::
 * Index::
 
@@ -633,6 +634,87 @@ with gramatical trees:
 @example
 $ nosetests3 test/test_semantic_tree.py
 @end example
+
+@node DameWebutils: Checking images and urls
+@chapter DameWebutils: Checking images and urls
+@cindex DameWebutils
+@cindex Checking urls
+@cindex Checking images
+
+You can use python testing in Django or Flask on a similar way than in
+another libraries, but there are some tasks as check broken urls or
+images that you can use in any web site. That's the subject of this
+chapter.
+
+Now, you can install damewebutils easily in a python virtual environment:
+
+@example
+davidam@davidam-Lenovo-B50-10:~/git/damewebutils$ mkdir /tmp/venv
+davidam@davidam-Lenovo-B50-10:~/git/damewebutils$ python3 -m venv /tmp/venv/
+davidam@davidam-Lenovo-B50-10:~/git/damewebutils$ cd /tmp/venv/
+davidam@davidam-Lenovo-B50-10:/tmp/venv$ ls
+bin  include  lib  lib64  pyvenv.cfg  share
+davidam@davidam-Lenovo-B50-10:/tmp/venv$ source bin/activate
+(venv) davidam@davidam-Lenovo-B50-10:/tmp/venv$ pip3 install damewebutils
+Processing /home/davidam/.cache/pip/wheels/6a/92/21/f0210ab109dd30d573ec84c79c7a2cc556b0991b3c53bb54ac/damewebutils-0.1.2-py3-none-any.whl
+Collecting markdown
+  Downloading Markdown-3.3.4-py3-none-any.whl (97 kB)
+     |████████████████████████████████| 97 kB 565 kB/s 
+Collecting requests
+  Using cached requests-2.25.1-py2.py3-none-any.whl (61 kB)
+Collecting lxml
+  Using cached lxml-4.6.2-cp38-cp38-manylinux1_x86_64.whl (5.4 MB)
+Collecting cssselect
+  Using cached cssselect-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting idna<3,>=2.5
+  Using cached idna-2.10-py2.py3-none-any.whl (58 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2020.12.5-py2.py3-none-any.whl (147 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Using cached urllib3-1.26.3-py2.py3-none-any.whl (137 kB)
+Collecting chardet<5,>=3.0.2
+  Using cached chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+Installing collected packages: markdown, idna, certifi, urllib3, chardet, requests, lxml, cssselect, damewebutils
+Successfully installed certifi-2020.12.5 chardet-4.0.0 cssselect-1.1.0 damewebutils-0.1.2 idna-2.10 lxml-4.6.2 markdown-3.3.4 requests-2.25.1 urllib3-1.26.3
+@end example
+
+Now you can execute dameimgs.py and dameurls.py giving some url as
+argument. For example:
+
+@example
+(venv) davidam@davidam-Lenovo-B50-10:/tmp/venv$ dameimgs.py https://www.davidam.com
+https://www.davidam.com
+https://www.davidam.com/img/davidam-pypi.jpg
+200
+https://www.davidam.com/img/davidam-pypi.jpg
+200
+Imgs with possible troubles in []
+@end example
+
+In this example, we have found one image using the html markup on a
+right way.
+
+With the urls is similar:
+
+@example
+$ dameurls.py https://www.davidam.com
+https://twitter.com/davidam9
+https://scholar.google.es/citations?user=znKwqIMAAAAJ&hl=es&oi=ao
+https://orcid.org/0000-0002-2986-5361
+https://code.orgmode.org/bzg/org-mode/src/master/contrib/lisp/org-effectiveness.el
+https://code.orgmode.org/bzg/org-mode/src/master/contrib/lisp/org-license.el
+https://savannah.nongnu.org/projects/drupal-el
+https://savannah.nongnu.org/projects/php-ext-el
+http://drupal.org/project/orgmode
+http://drupal.org/project/ocrad
+https://github.com/davidam/damegender
+[...]
+Urls with troubles:
+['https://github.com/davidam/damegender/blob/dev/manual/damegender.es.pdf']
+@end example
+
+
+
 
 @node License 
 @appendix License
