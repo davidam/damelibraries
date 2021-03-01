@@ -34,6 +34,7 @@ DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @valu
 * DameScikit::
 * DameNLTK::
 * DameWebutils::
+* DameDB::
 * License::
 * Index::
 
@@ -713,6 +714,57 @@ Urls with troubles:
 ['https://github.com/davidam/damegender/blob/dev/manual/damegender.es.pdf']
 @end example
 
+
+@node DameDB
+@chapter DameDB
+@cindex DameDB
+@cindex Databases
+
+@section SQLite
+
+SQLite is the most simple SQL database. You can create and check a sql
+datamodel executing the next tests:
+
+@example
+$ nosetests3 tests/test_damedb_sqlite.py
+@end example
+
+@section MySQL
+
+MySQL is the most used free sql database.
+
+You need create a database model with:
+
+@example
+$ mysql -u root < files/create.sql
+@end example
+
+Later you can check python operation with the database:
+
+@example
+$ nosetests3 tests/test_damedb_mysql.py
+@end example
+
+@section Mongo
+
+Mongo is a nosql database very used in the market.
+
+The first step to use Mongo in Python is to install Mongo in a
+computer. You can read the manual to install mongo in different
+operating systems @url{https://docs.mongodb.com/manual/tutorial/}.
+
+The second step is to install python libraries about mongo. For
+example, mongoengine.
+
+@example
+python -m pip install mongoengine
+@end example
+
+Later you can make exercises about mongo in python. Run your tests!
+
+@example
+$ nosetests3 tests/test_damedb_mongo.py
+@end example
 
 
 
