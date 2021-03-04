@@ -221,8 +221,17 @@ released with BSD license. You can check the tests now:
 
 @example
 $ cd /tmp/venv/lib/python3.8/site-packages/damescipy
-$ nosetest3 test
+$ nosetest3 tests
 @end example
+
+In test_basics.py you can learn useful maths such as to integrate, to
+interpolate, the distance between vectors, the polinomial roots, ...
+
+In null hypothesis significance testing, the p-value is the
+probability of obtaining test results at least as extreme as the
+results actually observed, under the assumption that the null
+hypothesis is correct. In test_pvalues.py you can learn how to use it
+in python.
 
 @node DameScikit
 @chapter DameScikit
