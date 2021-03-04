@@ -362,26 +362,36 @@ class TddInPythonExample(unittest.TestCase):
         neg_tweets = [('I do not like this car', 'negative'),
                       ('This view is horrible', 'negative'),
                       ('I feel tired this morning', 'negative'),
-                      ('I am not looking forward to the concert', 'negative'),
+                      ('I am not looking forward to the concert',
+                      'negative'),
                       ('He is my enemy', 'negative'),
                       ('This is a pathetic movie', 'negative')]
 
         tweets_with_sentiment = []
         for (tweet, sentiment) in pos_tweets + neg_tweets:
-            filtered_tweet_words = [word.lower() for word in tweet.split() if len(word) >= 3]
-            tweets_with_sentiment.append((filtered_tweet_words, sentiment))
+            filtered_tweet_words = [word.lower()
+                                 for word in tweet.split()
+                                 if len(word) >= 3]
+            tweets_with_sentiment.append((filtered_tweet_words,
+                                          sentiment))
 
         self.assertEqual([(['love', 'this', 'car'], 'positive'),
                           (['this', 'view', 'amazing'], 'positive'),
-                          (['feel', 'great', 'this', 'morning'], 'positive'),
-                          (['excited', 'about', 'the', 'concert'], 'positive'),
+                          (['feel', 'great', 'this', 'morning'],
+                          'positive'),
+                          (['excited', 'about', 'the', 'concert'],
+                          'positive'),
                           (['best', 'friend'], 'positive'),
-                          (['this', 'movie', 'was', 'great'], 'positive'),
-                          (['this', 'movie', 'was', 'not', 'pathetic'], 'positive'),
+                          (['this', 'movie', 'was', 'great'],
+                          'positive'),
+                          (['this', 'movie', 'was', 'not', 'pathetic'],
+                          'positive'),
                           (['not', 'like', 'this', 'car'], 'negative'),
                           (['this', 'view', 'horrible'], 'negative'),
-                          (['feel', 'tired', 'this', 'morning'], 'negative'),
-                          (['not', 'looking', 'forward', 'the', 'concert'], 'negative'),
+                          (['feel', 'tired', 'this', 'morning'],
+                          'negative'),
+                          (['not', 'looking', 'forward', 'the', 'concert'],
+                          'negative'),
                           (['enemy'], 'negative'),
                           (['this', 'pathetic', 'movie'], 'negative')],
                           tweets_with_sentiment)
@@ -429,9 +439,15 @@ And the python test would be:
 @example
     def test_gender_name_method_returns_correct_result(self):
         dn = DameNLTK()
-        self.assertTrue(dn.gender_name("Neo"), "male")
-        self.assertTrue(dn.gender_name("Trinity"), "female")
-        self.assertTrue(dn.gender_name("Andrea"), "both")                
+        self.assertTrue(
+                dn.gender_name("Neo"),
+                "male") 
+        self.assertTrue(
+                dn.gender_name("Trinity"),
+                "female")
+        self.assertTrue(
+                dn.gender_name("Andrea"),
+                "both")                
 @end example
 
 The python methods using machine learnig would be:
@@ -441,10 +457,12 @@ The python methods using machine learnig would be:
         return {'last_letter': word[-1]}
     
     def gender_classifier(self):
-        labeled_names = ([(name, 'male') for name in names.words('male.txt')] +
-                         [(name, 'female') for name in names.words('female.txt')])
+        labeled_names = (
+             [(name, 'male') for name in names.words('male.txt')] +
+             [(name, 'female') for name in names.words('female.txt')])
 
-        featuresets = [(self.gender_features(n), gender) for (n, gender) in labeled_names]
+        featuresets = [(self.gender_features(n), gender)
+                    for (n, gender) in labeled_names]
         train_set, test_set = featuresets[500:], featuresets[:500]
         classifier = nltk.NaiveBayesClassifier.train(train_set)
         return classifier
@@ -556,7 +574,9 @@ We can learn to use this method checking the test:
 @example
     def test_sentencesimilarity_method_returns_correct_result(self):
         dn = DameNLTK()
-        self.assertTrue(dn.sentence_similarity("This is a good sentence".split(), "This is a bad sentence".split()) > 0.6)
+        self.assertTrue(dn.sentence_similarity(
+        "This is a good sentence".split(),
+        "This is a bad sentence".split()) > 0.6)
 @end example
 
 Remember execute the test to learn if the test is running:
