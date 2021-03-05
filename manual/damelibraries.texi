@@ -233,6 +233,8 @@ results actually observed, under the assumption that the null
 hypothesis is correct. In test_pvalues.py you can learn how to use it
 in python.
 
+You can learn to use statistical distributions with test_stats.py.
+
 @node DameScikit
 @chapter DameScikit
 @cindex DameScikit
@@ -474,8 +476,10 @@ And the python tests would be:
     def test_gender_classifier_method_returns_correct_result(self):
         dn = DameNLTK()
         classifier = dn.gender_classifier()
-        self.assertTrue(classifier.classify(dn.gender_features("Neo")), "male")
-        self.assertTrue(classifier.classify(dn.gender_features("Trinity")), "female")        
+        self.assertTrue(classifier.classify(dn.gender_features("Neo")),
+                        "male")
+        self.assertTrue(classifier.classify(dn.gender_features("Trinity")),
+                        "female")        
 @end example
 
 You can use an advanced software to detect gender such as Damegender
