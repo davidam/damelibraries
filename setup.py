@@ -29,7 +29,7 @@ with open(path.join(this_directory, 'README.md')) as f:
     long_description = f.read()
 
 setup(name='damelibraries',
-      version='0.0.19',
+      version='0.0.20',
       description='Learning Libraries from tests by David Arroyo MEnéndez',
       long_description= long_description,
       classifiers=[
@@ -47,13 +47,14 @@ setup(name='damelibraries',
       install_requires=[
           'damealgorithms',
           'dameformats',
-#          'damemysql',
+          'damedb',
           'damenltk',
           'damenumpy',
           'damepandas',
           'damescipy',
           'damescraping',
           'damescikit',
+          'damewebutils',
       ],
       test_suite='nose.collector',
       tests_require=['nose', 'nose-cover3'],
