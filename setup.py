@@ -47,7 +47,6 @@ setup(name='damelibraries',
       install_requires=[
           'damealgorithms',
           'dameformats',
-          'damedb',
           'damenltk',
           'damenumpy',
           'damepandas',
