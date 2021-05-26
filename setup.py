@@ -17,7 +17,7 @@
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with Damegender; see the file LICENSE.  If not, write to
+# along with DameLibraries; see the file LICENSE.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
@@ -29,7 +29,7 @@ with open(path.join(this_directory, 'README.md')) as f:
     long_description = f.read()
 
 setup(name='damelibraries',
-      version='0.0.20',
+      version='0.0.21',
       description='Learning Libraries from tests by David Arroyo MEnéndez',
       long_description= long_description,
       classifiers=[
@@ -46,6 +46,7 @@ setup(name='damelibraries',
       data_files=[('damelibraries',['requirements.txt','LICENSE', 'files/images/mapgie_in_madrid_91.jpg'])],
       install_requires=[
           'damealgorithms',
+          'damebasics',
           'dameformats',
           'damenltk',
           'damenumpy',
