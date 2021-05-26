@@ -26,6 +26,7 @@ DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @valu
 @menu
 * Introduction::
 * Installation::
+* DameBasics::
 * DameFormats::
 * DameScraping::
 * DameNumpy::
@@ -134,6 +135,30 @@ $ nosetests3 tests
 $ cd /tmp/venv/lib/python3.8/site-packages/damescipy
 $ nosetests3 tests
 @end example
+
+@node DameBasics
+@chapter DameBasics
+@cindex DameBasics
+
+Before, to start to learn python libraries you can remember python
+sintaxis about control structures such as if, while, for, ... and
+datastructures such as lists, dictionaries, tuples, sets, dates, ...
+
+In DameBasics you can find some source snippets about it and execute
+it with:
+
+@example
+$ cd /tmp/venv/lib/python3.8/site-packages/damebasics
+$ pytest-3 tests
+@end example
+
+or
+
+@example
+$ cd /tmp/venv/lib/python3.8/site-packages/damebasics
+$ nosetests3 tests
+@end example
+
 
 @node DameFormats
 @chapter DameFormats
@@ -443,13 +468,13 @@ And the python test would be:
         dn = DameNLTK()
         self.assertTrue(
                 dn.gender_name("Neo"),
-                "male") 
+                "male")
         self.assertTrue(
                 dn.gender_name("Trinity"),
                 "female")
         self.assertTrue(
                 dn.gender_name("Andrea"),
-                "both")                
+                "both")
 @end example
 
 The python methods using machine learnig would be:
@@ -457,7 +482,7 @@ The python methods using machine learnig would be:
 @example
     def gender_features(self, word):
         return {'last_letter': word[-1]}
-    
+
     def gender_classifier(self):
         labeled_names = (
              [(name, 'male') for name in names.words('male.txt')] +
@@ -479,7 +504,7 @@ And the python tests would be:
         self.assertTrue(classifier.classify(dn.gender_features("Neo")),
                         "male")
         self.assertTrue(classifier.classify(dn.gender_features("Trinity")),
-                        "female")        
+                        "female")
 @end example
 
 You can use an advanced software to detect gender such as Damegender
@@ -490,14 +515,14 @@ $ pip3 install damegender[all]
 @end example
 
 You can learn to use the software with tests oriented to the user
-(bash files) or tests oriented to the developer (python tests). 
+(bash files) or tests oriented to the developer (python tests).
 
 @example
 $ python3 -m venv /tmp/damegender/
 $ cd /tmp/damegender/
 $ source bin/activate
 $ pip3 install damegender[all]
-$ ./testsbycommands.sh 
+$ ./testsbycommands.sh
 maindavid test is ok
 mainjesus test is ok
 mainines test is ok
@@ -655,8 +680,8 @@ twitter examples, wordnet, names with gender, ...). You can check the
 source to learn how to use it:
 
 @example
-$ nosetests3 test/test_corpus.py 
-$ nosetests3 test/test_gutenberg.py 
+$ nosetests3 test/test_corpus.py
+$ nosetests3 test/test_gutenberg.py
 @end example
 
 @section Gramatical Trees
@@ -693,7 +718,7 @@ davidam@davidam-Lenovo-B50-10:/tmp/venv$ source bin/activate
 Processing /home/davidam/.cache/pip/wheels/6a/92/21/f0210ab109dd30d573ec84c79c7a2cc556b0991b3c53bb54ac/damewebutils-0.1.2-py3-none-any.whl
 Collecting markdown
   Downloading Markdown-3.3.4-py3-none-any.whl (97 kB)
-     |████████████████████████████████| 97 kB 565 kB/s 
+     |████████████████████████████████| 97 kB 565 kB/s
 Collecting requests
   Using cached requests-2.25.1-py2.py3-none-any.whl (61 kB)
 Collecting lxml
@@ -801,7 +826,7 @@ $ nosetests3 tests/test_damedb_mongo.py
 
 
 
-@node License 
+@node License
 @appendix License
 @cindex License
 
