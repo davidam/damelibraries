@@ -6,14 +6,18 @@
 #+LATEX_CLASS_OPTIONS: [unicode,presentation,c,squeeze,shrink,10pt]
 #+BEAMER_FRAME_LEVEL: 2
 
-* Why DameLibraries?
+* Summary
+
+** Why DameLibraries?
 
 + This speech is about a methodology
+
 + To reach good practiques when you are learning python libraries
+
 + Programming oriented to tests is a good practique
+
 + Publish code packaged in a standard way is a good practique
 
-* Tests
 ** Tests Philosophy
 
 + You must write your own test/s for your method before you write the
@@ -40,7 +44,7 @@ $ pytest-3 tests
 $ pytest-3 tests/test_damejson.py
 #+END_SRC
 
-* Publising Code
+
 ** Publishing Code philosophy
 
 If you publish code:
@@ -136,7 +140,7 @@ $ pip3 install damefunniest
 $ pip3 install damenumpy
 #+END_SRC
 
-* References
+
 ** PEP 8
 
 The best guide style for Python
@@ -166,7 +170,6 @@ The best guide style for Python
 
 + https://agilemanifesto.org/principles.html
 
-* License
 
 ** GNU Free Documentation License
 Copyright (C) 2019 David Arroyo Menendez
