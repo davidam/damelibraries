@@ -1,0 +1,177 @@
+#+TITLE: DameLibraries
+#+AUTHOR: David Arroyo Menéndez
+#+OPTIONS: H:2 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS: TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:notintoc
+#+STARTUP: beamer
+#+LATEX_CLASS_OPTIONS: [unicode,presentation,c,squeeze,shrink,10pt]
+#+BEAMER_FRAME_LEVEL: 2
+
+* Why DameLibraries?
+
++ This speech is about a methodology
++ To reach good practiques when you are learning python libraries
++ Programming oriented to tests is a good practique
++ Publish code packaged in a standard way is a good practique
+
+* Tests
+** Tests Philosophy
+
++ You must write your own test/s for your method before you write the
+method.
++ You must not copy and paste code. You must write your own code
++ If you need learn a library, you can write tests.
+
+** Executing Tests (I)
+
+#+BEGIN_SRC
+$ pip3 install damenumpy
+$ cd /usr/local/lib/python3.5/dist-packages/damenumpy
+$ nosetests3 tests
+$ nosetests3 tests/test_basics.py
+$ nosetests3 tests/test_basics.py:TestBasics.test_indexing
+#+END_SRC
+
+** Executing Tests (II)
+
+#+BEGIN_SRC
+$ pip3 install dameformats
+$ cd /usr/local/lib/python3.5/dist-packages/dameformats
+$ pytest-3 tests
+$ pytest-3 tests/test_damejson.py
+#+END_SRC
+
+* Publising Code
+** Publishing Code philosophy
+
+If you publish code:
++ You can save your code in multiple computers in a comfortable
+  way. Save money! No desgracias!
++ Another people can see your code. To be recognized!
++ You can obtain improvements to your code. Peer revision.
++ Public code for public people. To be popular
+
+** Executing publising code
+
++ Github/Gitlab is your social network. To be clever.
++ Savannah is your social network. You are a GNU.
++ Pipy is your social network. To be a popular Python programmer.
+
+** Create a repository in github
+
+You can create a repository from the web interface and:
+
+#+BEGIN_SRC
+echo "# deleteme" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/davidam/deleteme.git
+git push -u origin master
+#+END_SRC
+
+You can learn to create a repository in your server and learn to configure it in:
++ http://www.davidam.com/docu/crear-repositorio-git-servidor.html
+
+** Packaging (I). Get a simple setup.py
+
+#+BEGIN_SRC
+$ git clone https://github.com/davidam/damenumpy.git
+$ cd damenumpy
+$ cat setup.py
+#+END_SRC
+
+** Packaging (II). Write a simple setup.py
+
+#+BEGIN_SRC python
+from setuptools import setup
+
+setup(name='damenumpy',
+      version='0.0.3',
+      description='Learning Numpy from Tests by David Arroyo Menéndez',
+      classifiers=[
+        'Development Status :: 3 - Alpha',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'Programming Language :: Python :: 3.6',
+        'Topic :: Scientific/Engineering',
+      ],
+      keywords='numpy tests',
+      url='http://github.com/davidam/damenumpy',
+      author='David Arroyo Menéndez',
+      author_email='davidam@gnu.org',
+      license='GPLv3',
+      packages=['damenumpy', 'damenumpy.tests'],
+      package_dir={'damenumpy': 'damenumpy', 'damegender.tests': 'damenumpy/tests'},
+      install_requires=[
+          'markdown',
+          'numpy',
+      ],
+      test_suite='nose.collector',
+      tests_require=['nose', 'nose-cover3'],
+      include_package_data=True,
+      zip_safe=False)
+#+END_SRC
+
+** Packaging (III). Commands
+
+#+BEGIN_SRC bash
+# damefunniest
+# https://python-packaging.readthedocs.io/en/latest/minimal.html
+
+To install from local:
+$ pip install -e .
+
+To install create tar.gz in dist directory:
+$ python3 setup.py register sdist
+
+To upload to pypi:
+$ twine upload dist/damefunniest-0.1.tar.gz
+
+To install from Internet:
+$ pip3 install damefunniest
+#+END_SRC
+
+** Packaging (IV). You can download the new package.
+
+#+BEGIN_SRC
+$ pip3 install damenumpy
+#+END_SRC
+
+* References
+** PEP 8
+
+The best guide style for Python
++ https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds
+
+** Teach Yourself Programming in Ten Years (Peter Norvig)
+
++ http://norvig.com/21-days.html
+
+** How to Become a Hacker
+
++ http://www.catb.org/~esr/faqs/hacker-howto.html
+
+** Revenge of the Nerds
+
++ http://www.paulgraham.com/icad.html
+
+** Free as in Freedom
+
++ https://www.oreilly.com/openbook/freedom/
+
+** Google Philosophy (Ten things)
+
++ https://www.google.com/about/philosophy.html
+
+** Agile Manifesto
+
++ https://agilemanifesto.org/principles.html
+
+* License
+
+** GNU Free Documentation License
+Copyright (C) 2019 David Arroyo Menendez
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in [[https://www.gnu.org/copyleft/fdl.html][GNU Free Documentation License]].
