@@ -169,6 +169,20 @@ $ nosetests3 tests
 @end example
 
 
+@node DameAlgorithms
+@chapter DameAlgorithms
+@cindex DameAlgorithms
+
+Similar to DameBasics is DameAlgorithms. The idea of this package is
+make simple exercises about python without libraries as
+dependencies. These exercises are about of algorithms: bfs, bst,
+hamiltonian, mcolors, minmax, quicksort, shellsort, ...
+
+@example
+$ cd /tmp/venv/lib/python3.8/site-packages/damealgorithms
+$ nosetests3 tests
+@end example
+
 @node DameFormats
 @chapter DameFormats
 @cindex DameFormats
