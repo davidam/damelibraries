@@ -47,18 +47,15 @@ DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @valu
 @cindex Introduction
 
 Python is a winner in the trend market of programming languages in
-this moment. Although the sintaxis is so comfortable to the
-programmers, the clue is in the modern libraries for system
-administrators, scientifics and with low importance for web
-programmers.
+this moment with the higher growth in the last years. Being the third
+programming language most used in January of 2021. Although
+the sintaxis is so comfortable to the programmers, the clue is in the
+modern libraries for system administrators, scientifics and with low
+importance for web programmers.
 
 You can see the Tiobe Index:
 
 @image{images/tiobeindex2021,6in,,Tiobe Index 2021}
-
-You can check that Python is growing fast and reaching the most
-important positions in the market. The third position in January of
-2021.
 
 You can use or don't use a test system such as nose or pytest, but all
 people need test the code in the programming. After to write software
@@ -111,29 +108,41 @@ $ pip3 install damelibraries
 $ cd lib/python3.5/site-packages/damelibraries
 @end example
 
-Now you can execute tests to check different libraries:
+Now you can execute tests to check different libraries with nose or
+pytest:
 
 @example
 $ cd /tmp/venv/lib/python3.8/site-packages/damealgorithms
 $ nosetests3 tests
+$ pytest-3 tests
+
+$ cd /tmp/venv/lib/python3.8/site-packages/damebasics
+$ nosetests3 tests
+$ pytest-3 tests
 
 $ cd /tmp/venv/lib/python3.8/site-packages/dameformats
 $ nosetests3 tests
+$ pytest-3 tests
 
 $ cd /tmp/venv/lib/python3.8/site-packages/damenltk
-$ nosetests3 tests
+$ nosetests3 test
+$ pytest-3 test
 
 $ cd /tmp/venv/lib/python3.8/site-packages/damenumpy
 $ nosetests3 tests
+$ pytest-3 tests
 
 $ cd /tmp/venv/lib/python3.8/site-packages/damepandas
 $ nosetests3 tests
+$ pytest-3 tests
 
 $ cd /tmp/venv/lib/python3.8/site-packages/damescikit
 $ nosetests3 tests
+$ pytest-3 tests
 
 $ cd /tmp/venv/lib/python3.8/site-packages/damescipy
 $ nosetests3 tests
+$ pytest-3 tests
 @end example
 
 @node DameBasics
@@ -164,14 +173,17 @@ $ nosetests3 tests
 @chapter DameFormats
 @cindex DameFormats
 
-Json, csv, xml are very important format files. This chapter is about
-how to use python with these formats presenting some snippets:
+Json, csv, xml, netcdf, yaml ... are very important format files. This
+chapter is about how to use python with these formats presenting some
+snippets:
 
 @example
 $ cd /tmp/venv/lib/python3.8/site-packages/dameformats
 $ nosetests3 tests/test_damecsv.py
 $ nosetests3 tests/test_damejson.py
 $ nosetests3 tests/test_damexml.py
+$ nosetests3 tests/test_damenetcdf.py
+$ nosetests3 tests/test_dameyaml.py
 @end example
 
 @node DameScraping
@@ -246,7 +258,9 @@ released with BSD license. You can check the tests now:
 
 @example
 $ cd /tmp/venv/lib/python3.8/site-packages/damescipy
-$ nosetest3 tests
+$ nosetest3 tests/test_basics.py
+$ nosetest3 tests/test_pvalues.py
+$ nosetest3 tests/test_stats.py
 @end example
 
 In test_basics.py you can learn useful maths such as to integrate, to
@@ -301,9 +315,10 @@ learning models on a simple way:
 
 @example
 $ nosetests3 tests/test_models.py
+$ nosetests3 tests/test_vectorizer.py
 @end example
 
-Take a look to a single test. Each array in the vector X (input) has
+Take a look to a single model test. Each array in the vector X (input) has
 an element in the vector Y (output). So [-1, -1] has the
 representation 1 and [2, 1] has the representation 2.
 
