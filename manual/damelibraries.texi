@@ -186,6 +186,11 @@ $ nosetests3 tests/test_damenetcdf.py
 $ nosetests3 tests/test_dameyaml.py
 @end example
 
+CSV format is used in datasets. JSON and YAML is popular using
+javascript or webservices. XML is used in config files or as markup
+language for documentation, or web publishing. NetCDF is used in big
+files as files about weather.
+
 @node DameScraping
 @chapter DameScraping
 @cindex DameScraping
