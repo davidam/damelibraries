@@ -29,7 +29,7 @@ with open(path.join(this_directory, 'README.md')) as f:
     long_description = f.read()
 
 setup(name='damelibraries',
-      version='0.0.21',
+      version='0.1',
       description='Learning Libraries from tests by David Arroyo MEnéndez',
       long_description= long_description,
       classifiers=[
