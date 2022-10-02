@@ -36,6 +36,7 @@ DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @valu
 * DameNLTK::
 * DameWebutils::
 * DameDB::
+* DameOpenCV::
 * License::
 * Index::
 
@@ -742,17 +743,17 @@ chapter.
 Now, you can install damewebutils easily in a python virtual environment:
 
 @example
-davidam@davidam-Lenovo-B50-10:~/git/damewebutils$ mkdir /tmp/venv
-davidam@davidam-Lenovo-B50-10:~/git/damewebutils$ python3 -m venv /tmp/venv/
-davidam@davidam-Lenovo-B50-10:~/git/damewebutils$ cd /tmp/venv/
-davidam@davidam-Lenovo-B50-10:/tmp/venv$ ls
+davidam@@davidam-Lenovo-B50-10:~/git/damewebutils$ mkdir /tmp/venv
+davidam@@davidam-Lenovo-B50-10:~/git/damewebutils$ python3 -m venv /tmp/venv/
+davidam@@davidam-Lenovo-B50-10:~/git/damewebutils$ cd /tmp/venv/
+davidam@@davidam-Lenovo-B50-10:/tmp/venv$ ls
 bin  include  lib  lib64  pyvenv.cfg  share
-davidam@davidam-Lenovo-B50-10:/tmp/venv$ source bin/activate
-(venv) davidam@davidam-Lenovo-B50-10:/tmp/venv$ pip3 install damewebutils
+davidam@@davidam-Lenovo-B50-10:/tmp/venv$ source bin/activate
+(venv) davidam@@davidam-Lenovo-B50-10:/tmp/venv$ pip3 install damewebutils
 Processing /home/davidam/.cache/pip/wheels/6a/92/21/f0210ab109dd30d573ec84c79c7a2cc556b0991b3c53bb54ac/damewebutils-0.1.2-py3-none-any.whl
 Collecting markdown
   Downloading Markdown-3.3.4-py3-none-any.whl (97 kB)
-     |████████████████████████████████| 97 kB 565 kB/s
+     |++++++++++++++++++++++++++++++++| 97 kB 565 kB/s
 Collecting requests
   Using cached requests-2.25.1-py2.py3-none-any.whl (61 kB)
 Collecting lxml
@@ -775,7 +776,7 @@ Now you can execute dameimgs.py and dameurls.py giving some url as
 argument. For example:
 
 @example
-(venv) davidam@davidam-Lenovo-B50-10:/tmp/venv$ dameimgs.py https://www.davidam.com
+(venv) davidam@@davidam-Lenovo-B50-10:/tmp/venv$ dameimgs.py https://www.davidam.com
 https://www.davidam.com
 https://www.davidam.com/img/davidam-pypi.jpg
 200
@@ -805,7 +806,6 @@ https://github.com/davidam/damegender
 Urls with troubles:
 ['https://github.com/davidam/damegender/blob/dev/manual/damegender.es.pdf']
 @end example
-
 
 @node DameDB
 @chapter DameDB
@@ -858,7 +858,45 @@ Later you can make exercises about mongo in python. Run your tests!
 $ nosetests3 tests/test_damedb_mongo.py
 @end example
 
+@node DameOpenCV
+@chapter DameOpenCV
+@cindex DameOpenCV
+@cindex OpenCV
 
+OpenCV supports the largest computer vision library in the world.
+DameOpenCV goal is to give examples to understand the basis
+of this library.
+
+Some features supported by OpenCV are:
+
+@itemize @bullet
+@item
+2D and 3D feature toolkits
+@item
+Egomotion estimation
+@item
+Facial recognition system
+@item
+Gesture recognition
+@item
+Human–computer interaction (HCI)
+@item
+Mobile robotics
+@item
+Motion understanding
+@item
+Object detection
+@item
+Segmentation and recognition
+@item
+Stereopsis stereo vision: depth perception from 2 cameras
+@item
+Structure from motion (SFM)
+@item
+Motion tracking
+@item
+Augmented reality
+@end itemize
 
 @node License
 @appendix License
