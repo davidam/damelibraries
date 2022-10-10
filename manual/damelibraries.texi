@@ -736,9 +736,13 @@ $ nosetests3 test/test_semantic_tree.py
 @cindex Checking images
 
 You can use python testing in Django or Flask on a similar way than in
-another libraries, but there are some tasks as check broken urls or
-images that you can use in any web site. That's the subject of this
-chapter.
+another libraries, but that is NOT the subject of this chapter.
+
+In this chapter you will learn the basis of web programming with Python,
+so you can learn to make a templating system (template.py), a web server
+(dameserver.py), or simple tasks as to check json files (damejson.py), to
+check broken urls (dameurls.py) or to check broken images (dameimgs.py)
+in a web site.
 
 Now, you can install damewebutils easily in a python virtual environment:
 
