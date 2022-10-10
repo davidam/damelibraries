@@ -741,8 +741,8 @@ another libraries, but that is NOT the subject of this chapter.
 In this chapter you will learn the basis of web programming with Python,
 so you can learn to make a templating system (template.py), a web server
 (dameserver.py), or simple tasks as to check json files (damejson.py), to
-check broken urls (dameurls.py) or to check broken images (dameimgs.py)
-in a web site.
+check broken urls (dameurls.py) or to check broken images (dameimgs.py),
+in a web site or check rss news in Internet (damerss.py)
 
 Now, you can install damewebutils easily in a python virtual environment:
 
