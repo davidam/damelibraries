@@ -146,6 +146,13 @@ $ nosetests3 tests
 $ pytest-3 tests
 @end example
 
+Many times you can find useful to call to single method, for instance:
+
+@example
+$ nosetests tests/test_strings.py:TddInPythonExample.test_string_split_method_returns_correct_result
+$ pytest tests/test_arithmetics.py::TddInPythonExample::test_arithmetics_calculator_returns_correct_result
+@end example
+
 @node DameBasics
 @chapter DameBasics
 @cindex DameBasics
