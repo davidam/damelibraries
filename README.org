@@ -1,5 +1,6 @@
 * Logo
-file:https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Magpie_in_Madrid_%28Spain%29_91.jpg/636px-Magpie_in_Madrid_%28Spain%29_91.jpg
+
+file:https://es.wikipedia.org/wiki/Columbidae#/media/Archivo:Rock_dove_-_natures_pics.jpg
 
 * Introduction
 
