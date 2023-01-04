@@ -13,8 +13,7 @@
 
 # Logo<a id="sec-1" name="sec-1"></a>
 
-![img](https://upload.wikimedia.org/wikipedia/commons/2/2b/Rock_dove_-_natures_pics.jpg)
-
+![img](https://upload.wikimedia.org/wikipedia/commons/1/13/Paz_en_el_mundo.gif)
 
 # Introduction<a id="sec-2" name="sec-2"></a>
 
