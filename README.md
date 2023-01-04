@@ -13,7 +13,8 @@
 
 # Logo<a id="sec-1" name="sec-1"></a>
 
-![img](https://es.wikipedia.org/wiki/Columbidae#/media/Archivo:Rock_dove_-_natures_pics.jpg)
+![img](https://upload.wikimedia.org/wikipedia/commons/2/2b/Rock_dove_-_natures_pics.jpg)
+
 
 # Introduction<a id="sec-2" name="sec-2"></a>
 
