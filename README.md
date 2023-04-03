@@ -43,15 +43,23 @@ Checking my snippets:
 
     $ cd /tmp/dl/lib/python3.5/site-packages/damealgorithms
     $ nosetests3 tests
-    $ cd /tmp/dl/lib/python3.5/site-packages/damejson
+    $ cd /tmp/dl/lib/python3.5/site-packages/damebasics
     $ nosetests3 tests
-    $ cd /tmp/dl/lib/python3.5/site-packages/damepandas
+    $ cd /tmp/dl/lib/python3.5/site-packages/dameformats
     $ nosetests3 tests
     $ cd /tmp/dl/lib/python3.5/site-packages/damenltk
     $ nosetests3 tests
     $ cd /tmp/dl/lib/python3.5/site-packages/damenumpy
+    $ nosetests3 tests    
+    $ cd /tmp/dl/lib/python3.5/site-packages/damepandas
+    $ nosetests3 tests
+    $ cd /tmp/dl/lib/python3.5/site-packages/damescikit
     $ nosetests3 tests
     $ cd /tmp/dl/lib/python3.5/site-packages/damescipy
+    $ nosetests3 tests
+    $ cd /tmp/dl/lib/python3.5/site-packages/damescraping
+    $ nosetests3 tests
+    $ cd /tmp/dl/lib/python3.5/site-packages/damewebutils
     $ nosetests3 tests
 
 # Music<a id="sec-4" name="sec-4"></a>
