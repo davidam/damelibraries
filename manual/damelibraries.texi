@@ -48,15 +48,15 @@ DameLibraries: Using Python Libraries from Tests (version @value{VERSION}, @valu
 @cindex Introduction
 
 Python is a winner in the trend market of programming languages in
-this moment with the higher growth in the last years. Being the third
-programming language most used in January of 2021. Although
+this moment with the higher growth in the last 10 years. Being the
+most used programming language in May of 2026. Although, 
 the sintaxis is so comfortable to the programmers, the clue is in the
 modern libraries for system administrators, scientifics and with low
 importance for web programmers.
 
 You can see the Tiobe Index:
 
-@image{images/tiobeindex2021,6in,,Tiobe Index 2021}
+@image{images/tiobeindex2026,6in,,Tiobe Index 2021}
 
 You can use or don't use a test system such as nose or pytest, but all
 people need test the code in the programming. After to write software
@@ -106,10 +106,10 @@ $ cd /tmp/venv
 $ source bin/activate
 $ pip install --upgrade pip
 $ pip3 install damelibraries
-$ cd lib/python3.5/site-packages/damelibraries
+$ cd lib/python3.14/site-packages/damelibraries
 @end example
 
-Now you can execute tests to check different libraries with nose or
+Now you can execute tests to check several libraries with nose or
 pytest:
 
 @example
@@ -157,7 +157,7 @@ $ pytest tests/test_arithmetics.py::TddInPythonExample::test_arithmetics_calcula
 @chapter DameBasics
 @cindex DameBasics
 
-Before, to start to learn python libraries you can remember python
+Before we begin to learn python libraries can be useful remember python
 sintaxis about control structures such as if, while, for, ... and
 datastructures such as lists, dictionaries, tuples, sets, dates, ...
 
@@ -240,13 +240,13 @@ $ nosetests3 test/test_newspaper.py
 @chapter DameNumpy
 @cindex DameNumpy
 
-Numpy is a library about algebra used as dependency in a lot of python
-programs. We have classified the tests in basics, datatypes and
-maths. Basics is related to the most common uses about the library
-(sum vectors, transpose matrix, generate eye matrix, ...). Datatypes
-is about specific uses about the numpy datatypes that perhaps you need
-practice more. And maths is about maths operations. You can execute
-the test with:
+Numpy is a library about how to do algebra. It's used as
+dependency in a lot of python programs. We have classified the
+tests in basics, datatypes and maths. Basics is related to the
+most common uses about the library (sum vectors, transpose matrix,
+generate eye matrix, ...). Datatypes is about specific uses about
+the numpy datatypes that perhaps you need practice more. And maths
+is about maths operations. You can execute the test with:
 
 @example
 $ cd /tmp/venv/lib/python3.8/site-packages/damenumpy
@@ -262,6 +262,13 @@ $ nosetests3 tests/test_maths.py
 Pandas is a fast, powerful, flexible and easy to use open source data
 analysis and manipulation tool, built on top of the Python programming
 language.
+
+You must to decide if to use vectors with pandas, numpy or python arrays.
+If you demand an user friendly system to manage matrix you could use Pandas.
+If you demand a fast system to manage vectors, you could use Numpy.
+And if you don't want to use dependencies you can use the python arrays. 
+
+Now, check the tests: 
 
 @example
 $ cd /tmp/venv/lib/python3.8/site-packages/damepandas
